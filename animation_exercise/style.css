@@ -1,0 +1,106 @@
+html {
+  background-color: black;
+  color: white;
+}
+.heading {
+  font-size: 100px;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 20px #ff0099, 0 0 30px #58dbff, 0 0 40px #00f9f4, 0 0 50px;
+  }
+  to {
+    text-shadow: 0 0 20px #ff0000, 0 0 30px #ff4da6, 0 0 40px #9a07df,
+      0 0 50px #ff4da6;
+  }
+}
+nav {
+  border: 6px solid rgb(255, 255, 255);
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+ul{
+  display:flex;
+  color: #f1f1f1;
+}
+
+.contact{
+  border: 1px solid #f1f1f1;
+color: #f1f1f1;
+  background-color:#f1f1f1;
+  padding: 10px;
+}
+
+.contact:hover{
+  background-color: #ff0000;
+}
+
+.about{
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+.about:hover{
+  background-color: #ff0000;
+}
+
+.flip-card {
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  border: 1px solid #000000;
+  perspective: 1000px;
+  margin-top: 5px;
+}
+
+.inner-flip-card{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .inner-flip-card {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  background-color: rgb(220, 12, 12);
+  color: rgb(0, 0, 0);
+  transform: rotateY(180deg);
+}
+
+footer {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #ffffff;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 8px;
+  position: absolute;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  padding: 3px;
+}
